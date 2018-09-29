@@ -2,9 +2,10 @@ function signal_corrected = TDDR( signal , sample_rate )
 % This function is the reference implementation for the TDDR algorithm for 
 %   motion correction of fNIRS data, as described in:
 %
-%   Fishburn F.A., Ludlum R.S., Vaidya C.J., & Medvedev A.V. (In Press). 
+%   Fishburn F.A., Ludlum R.S., Vaidya C.J., & Medvedev A.V. (2019). 
 %   Temporal Derivative Distribution Repair (TDDR): A motion correction 
-%   method for fNIRS. NeuroImage.
+%   method for fNIRS. NeuroImage, 184, 171-179.
+%   https://doi.org/10.1016/j.neuroimage.2018.09.025
 %
 % Usage:
 %   signals_corrected = TDDR( signals , sample_rate );
