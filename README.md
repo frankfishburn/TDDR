@@ -7,7 +7,7 @@ Fishburn F.A., Ludlum R.S., Vaidya C.J., & Medvedev A.V. (2019). Temporal Deriva
 
 ---
 ### Usage
-```Matlab
+```matlab
 signals_corrected = TDDR( signals , sample_rate );
 ```
 
