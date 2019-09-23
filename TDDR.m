@@ -32,6 +32,8 @@ end
 filter_cutoff = .5;
 filter_order = 3;
 Fc = filter_cutoff * 2/sample_rate;
+signal_mean = mean(signal);
+signal = signal - signal_mean;
 if Fc<1
     [fb,fa] = butter(filter_order,Fc);
     signal_low = filtfilt(fb,fa,signal);
@@ -90,6 +92,6 @@ signal_low_corrected = cumsum([0; new_deriv]);
 signal_low_corrected = signal_low_corrected - mean(signal_low_corrected);
 
 %% Postprocess: Merge back with uncorrected high frequency component
-signal_corrected = signal_low_corrected + signal_high;
+signal_corrected = signal_low_corrected + signal_high + signal_mean;
 
 end
