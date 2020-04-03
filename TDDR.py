@@ -70,7 +70,7 @@ def TDDR(signal, sample_rate):
         # Step 3d. Scale deviations by standard deviation and tuning parameter
         r = dev / (sigma * tune)
 
-        # Step 3e. Calculate new weights accoring to Tukey's biweight function
+        # Step 3e. Calculate new weights according to Tukey's biweight function
         w = ((1 - r**2) * (r < 1)) ** 2
 
         # Step 3f. Terminate if new estimate is within machine-precision of old estimate
